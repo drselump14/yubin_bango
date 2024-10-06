@@ -3,6 +3,7 @@ defmodule YubinBango.MixProject do
 
   def project do
     [
+      aliases: aliases(),
       app: :yubin_bango,
       version: "0.1.0",
       elixir: "~> 1.17",
@@ -59,4 +60,43 @@ defmodule YubinBango.MixProject do
       }
     ]
   end
+
+  defp aliases do
+    [
+      gp: "git.prepare",
+      "dev.setup": [
+        "deps.get",
+        "git.prepare",
+        "compile",
+        "dialyzer.prepare"
+      ],
+      "dialyzer.prepare": [
+        fn _ -> shell().info("prepare dialyzer_plt") end,
+        "deps.unlock --check-unused"
+      ],
+      "git.prepare": [
+        fn _ -> shell().info("Installing git hooks") end,
+        "git_hooks.install"
+      ],
+      lint: [
+        "lint.hex_audit",
+        "lint.compile_and_format",
+        "dialyzer"
+      ],
+      "lint.hex_audit": [
+        fn _ -> shell().info("Lint Audit Hex Dependencies") end,
+        "deps.audit",
+        "deps.unlock --check-unused"
+      ],
+      "lint.compile_and_format": [
+        fn _ -> shell().info("Run linter to check code formatting") end,
+        "format --dry-run --check-formatted",
+        "hex.audit",
+        "credo --strict",
+        "compile --all-warnings"
+      ]
+    ]
+  end
+
+  defp shell, do: Mix.shell()
 end
