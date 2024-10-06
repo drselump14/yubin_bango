@@ -8,6 +8,7 @@ defmodule YubinBango.ETSUtilsTest do
 
   test "address_lookup/2" do
     ETSUtils.create_table(@ets_table_name)
+
     ETSUtils.insert_address_data(@ets_table_name, "1050004", %{
       city: "港区",
       city_kana: "港区",
