@@ -30,7 +30,7 @@ defmodule YubinBango.MixProject do
   end
 
   defp description do
-    "YubinBango is a library for lookup address with Japan postal code. YubinBangoは日本の郵便番号から住所を検索するライブラリです。"
+    "YubinBango is a library for lookup address with Japan postal-code/zipcode. YubinBangoは日本の郵便番号から住所を検索するライブラリです。"
   end
 
   # Run "mix help compile.app" to learn about applications.
