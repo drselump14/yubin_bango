@@ -2,6 +2,7 @@
 
   YubinBango is a library for lookup address with Japan postal code.
   It uses ETS for blazing fast lookup address.
+  YubinBangoは日本の郵便番号から住所を検索するライブラリです。
 
 ## Installation
 
