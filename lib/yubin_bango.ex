@@ -49,17 +49,17 @@ defmodule YubinBango do
 
   ## Examples
 
-    iex> YubinBango.lookup("105-0004")
-    {:ok, %YubinBango.Address{city: "港区", city_kana: "ﾐﾅﾄｸ", district: "新橋", district_kana: "ｼﾝﾊﾞｼ", prefecture: "東京都", prefecture_kana: "ﾄｳｷｮｳﾄ", zipcode: "1050004"}}
+      iex> YubinBango.lookup("105-0004")
+      {:ok, %YubinBango.Address{city: "港区", city_kana: "ﾐﾅﾄｸ", district: "新橋", district_kana: "ｼﾝﾊﾞｼ", prefecture: "東京都", prefecture_kana: "ﾄｳｷｮｳﾄ", zipcode: "1050004"}}
 
-    iex> YubinBango.lookup("1050004")
-    {:ok, %YubinBango.Address{city: "港区", city_kana: "ﾐﾅﾄｸ", district: "新橋", district_kana: "ｼﾝﾊﾞｼ", prefecture: "東京都", prefecture_kana: "ﾄｳｷｮｳﾄ", zipcode: "1050004"}}
+      iex> YubinBango.lookup("1050004")
+      {:ok, %YubinBango.Address{city: "港区", city_kana: "ﾐﾅﾄｸ", district: "新橋", district_kana: "ｼﾝﾊﾞｼ", prefecture: "東京都", prefecture_kana: "ﾄｳｷｮｳﾄ", zipcode: "1050004"}}
 
-    iex> YubinBango.lookup("1234567")
-    {:error, :not_found}
+      iex> YubinBango.lookup("1234567")
+      {:error, :not_found}
 
-    iex> YubinBango.lookup("12345678")
-    {:error, :wrong_format, "Please specify a 7-digit zip code with or without hyphen. (e.g. 1234567 or 123-4567)"}
+      iex> YubinBango.lookup("12345678")
+      {:error, :wrong_format, "Please specify a 7-digit zip code with or without hyphen. (e.g. 1234567 or 123-4567)"}
   """
   @spec lookup(String.t()) ::
           {:ok, map()} | {:error, :wrong_format, String.t()} | {:error, :not_found}
