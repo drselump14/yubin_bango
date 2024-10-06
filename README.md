@@ -47,10 +47,10 @@ end
 # Lookup address with postal code
 
 iex> YubinBango.lookup("1050004")
-{:ok, %YubinBango.Address{}}
+{:ok, %YubinBango.Address{city: "港区", city_kana: "ﾐﾅﾄｸ", district: "新橋", district_kana: "ｼﾝﾊﾞｼ", prefecture: "東京都", prefecture_kana: "ﾄｳｷｮｳﾄ", zipcode: "1050004"}}
 
 iex> YubinBango.lookup("105-0004")
-{:ok, %YubinBango.Address{}}
+{:ok, %YubinBango.Address{city: "港区", city_kana: "ﾐﾅﾄｸ", district: "新橋", district_kana: "ｼﾝﾊﾞｼ", prefecture: "東京都", prefecture_kana: "ﾄｳｷｮｳﾄ", zipcode: "1050004"}}
 
 iex> YubinBango.lookup("1050004-1")
 {:error, :wrong_format, _}
