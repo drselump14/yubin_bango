@@ -5,12 +5,12 @@ defmodule YubinBango.MixProject do
     [
       aliases: aliases(),
       app: :yubin_bango,
-      version: "0.1.5",
+      version: "0.1.6",
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       docs: [
-        main: "YubinBango",
+        main: "readme",
         extras: ["README.md"]
       ],
       test_coverage: [tool: ExCoveralls],
