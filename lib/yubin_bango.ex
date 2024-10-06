@@ -1,4 +1,7 @@
 defmodule YubinBango do
+  @moduledoc """
+  YubinBango is a library for lookup address with Japan postal code.
+  """
   use GenServer
 
   alias YubinBango.ETSUtils

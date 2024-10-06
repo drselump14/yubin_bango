@@ -60,7 +60,7 @@ defmodule YubinBango.ETSUtils do
     {:error, :wrong_format, "Please specify a 7-digit zip code. (e.g. 1234567 or 123-4567)"}
   """
   @spec address_lookup(atom(), String.t()) ::
-          {:ok, %Address{}} | {:error, :not_found} | {:error, :wrong_format, String.t()}
+          {:ok, Address.t()} | {:error, :not_found} | {:error, :wrong_format, String.t()}
   def address_lookup(table_name, <<zipcode::bytes-size(7)>>) when is_atom(table_name),
     do: do_lookup(table_name, zipcode)
 
