@@ -1,0 +1,7 @@
+%{
+  "csv": {:hex, :csv, "3.2.1", "6d401f1ed33acb2627682a9ab6021e96d33ca6c1c6bccc243d8f7e2197d032f5", [:mix], [], "hexpm", "8f55a0524923ae49e97ff2642122a2ce7c61e159e7fe1184670b2ce847aee6c8"},
+  "dialyxir": {:hex, :dialyxir, "1.4.4", "fb3ce8741edeaea59c9ae84d5cec75da00fa89fe401c72d6e047d11a61f65f70", [:mix], [{:erlex, ">= 0.2.7", [hex: :erlex, repo: "hexpm", optional: false]}], "hexpm", "cd6111e8017ccd563e65621a4d9a4a1c5cd333df30cebc7face8029cacb4eff6"},
+  "erlex": {:hex, :erlex, "0.2.7", "810e8725f96ab74d17aac676e748627a07bc87eb950d2b83acd29dc047a30595", [:mix], [], "hexpm", "3ed95f79d1a844c3f6bf0cea61e0d5612a42ce56da9c03f01df538685365efb0"},
+  "parallel_stream": {:hex, :parallel_stream, "1.1.0", "f52f73eb344bc22de335992377413138405796e0d0ad99d995d9977ac29f1ca9", [:mix], [], "hexpm", "684fd19191aedfaf387bbabbeb8ff3c752f0220c8112eb907d797f4592d6e871"},
+  "typed_struct": {:hex, :typed_struct, "0.3.0", "939789e3c1dca39d7170c87f729127469d1315dcf99fee8e152bb774b17e7ff7", [:mix], [], "hexpm", "c50bd5c3a61fe4e198a8504f939be3d3c85903b382bde4865579bc23111d1b6d"},
+}
