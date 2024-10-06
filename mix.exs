@@ -5,10 +5,14 @@ defmodule YubinBango.MixProject do
     [
       aliases: aliases(),
       app: :yubin_bango,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      docs: [
+        main: "YubinBango",
+        extras: ["README.md"]
+      ],
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
         coveralls: :test,
@@ -43,7 +47,7 @@ defmodule YubinBango.MixProject do
       {:csv, "~> 3.2"},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:excoveralls, "~> 0.18", only: [:dev, :test]},
-      {:ex_doc, "~> 0.27", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.34", only: :dev, runtime: false},
       {:git_hooks, "~> 0.7.3", only: [:dev], runtime: false},
       {:mix_audit, "~> 2.1"},
       {:typed_struct, "~> 0.3.0"}
