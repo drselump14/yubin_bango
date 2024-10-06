@@ -52,7 +52,7 @@ defmodule YubinBango.MixProject do
 
   defp package do
     [
-      files: ~w(lib mix.exs README.md LICENSE),
+      files: ~w(lib mix.exs README.md LICENSE priv),
       maintainers: ["Slamet Kristanto"],
       licenses: ["MIT"],
       links: %{
