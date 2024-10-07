@@ -5,7 +5,7 @@ defmodule YubinBango.MixProject do
     [
       aliases: aliases(),
       app: :yubin_bango,
-      version: "0.1.6",
+      version: "0.1.7",
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -49,7 +49,7 @@ defmodule YubinBango.MixProject do
       {:excoveralls, "~> 0.18", only: [:dev, :test]},
       {:ex_doc, "~> 0.34", only: :dev, runtime: false},
       {:git_hooks, "~> 0.7.3", only: [:dev], runtime: false},
-      {:mix_audit, "~> 2.1"},
+      {:mix_audit, "~> 2.1", only: [:dev, :test]},
       {:typed_struct, "~> 0.3.0"}
     ]
   end
